@@ -90,19 +90,10 @@ export const academicStyle=createStyleSheet(({colors,device,border})=>({
       },
       shadowOpacity: 0.1,
       shadowRadius: 10,
-      // elevation: 5,
       overflow: 'hidden',
       position: 'relative',
     },
-    // Pseudo glass effect using a white overlay
-    glassOverlay: {
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      backgroundColor: 'rgba(255, 255, 255, 0.3)',
-    },
+
     header: {
       flexDirection: 'row',
       justifyContent: 'space-between',
@@ -112,9 +103,6 @@ export const academicStyle=createStyleSheet(({colors,device,border})=>({
     },
     title: {
       color: Colors.black,
-      textShadowColor: 'rgba(0, 0, 0, 0.1)',
-      textShadowOffset: {width: 0, height: 1},
-      textShadowRadius: 2,
     },
     viewAllButton: {
       backgroundColor: 'rgba(255, 255, 255, 0.5)',

@@ -10,6 +10,9 @@ import {FC} from 'react';
 import ProfileScreen from '@screen/profile/ProfileScreen'
 import NotificationScreen from '@screen/notification/NotificationScreen';
 import MvitScreen from '@screen/mvit/MvitScreen';
+import VtuScreen from '@screen/vtu/VtuScreen';
+import CircularScreen from '@screen/vtu/CircularScreen';
+import SyllabusScreen from '@screen/vtu/SyllabusScreen';
 const Stack = createNativeStackNavigator();
 
 const Navigation: FC = () => {
@@ -69,6 +72,27 @@ const Navigation: FC = () => {
             }}
             name="MvitScreen"
             component={MvitScreen}
+        />
+        <Stack.Screen 
+            options={{
+                animation:"fade"
+            }}
+            name="VtuScreen"
+            component={VtuScreen}
+        />
+        <Stack.Screen 
+            options={{
+                animation:"fade"
+            }}
+            name="CircularScreen"
+            component={CircularScreen}
+        />
+        <Stack.Screen 
+            options={{
+                animation:"fade"
+            }}
+            name="SyllabusScreen"
+            component={SyllabusScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

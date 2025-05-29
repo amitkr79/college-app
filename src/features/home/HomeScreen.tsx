@@ -57,7 +57,7 @@ const HomeScreen: FC = () => {
 
           <TouchableOpacity
             style={styles.box}
-            onPress={() => navigate('MvitScreen')}>
+            onPress={() => navigate('VtuScreen')}>
             <Image
               source={require('@assets/academic/Cap.png')}
               resizeMode="contain"
@@ -83,10 +83,8 @@ const HomeScreen: FC = () => {
         </View>
 
         {/* fourth section  */}
-
-        <Academics/>
-
-
+        <Academics />
+        
       </ScrollView>
     </>
   );

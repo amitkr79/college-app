@@ -6,6 +6,7 @@ import {goBack, navigate} from '@utils/NavigationUtils';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {useStyles} from 'react-native-unistyles';
 import {dashboardStyle} from '@unistyles/dashboardStyles';
+import CustomText from '@components/global/CustomText';
 
 const ICONS = [
   {key: 'Circular', src: require('@assets/academic/Noticeboard.png')},
@@ -42,10 +43,20 @@ const MvitScreen = () => {
       <View style={styles.header}>
         <TouchableOpacity onPress={() => goBack()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color={Colors.black} />
-          <Text style={styles.headerTitle}>Dashboard</Text>
+          <CustomText
+            variant="h6"
+            fontFamily="Okra-Medium"
+            style={styles.headerTitle}>
+            Dashboard
+          </CustomText>
         </TouchableOpacity>
         <View style={styles.userInfo}>
-          <Text style={styles.userName}>Jane</Text>
+          <CustomText
+            variant="h7"
+            fontFamily="Okra-Light"
+            style={{marginRight: 8}}>
+            Jone doe
+          </CustomText>
           <Image
             source={require('@assets/images/user.png')}
             style={styles.avatar}
@@ -60,12 +71,32 @@ const MvitScreen = () => {
         <View style={styles.notificationCard}>
           <View style={styles.notificationHeader}>
             <Ionicons name="notifications" size={20} color={Colors.primary} />
-            <Text style={styles.notificationTitle}>Notifications</Text>
+            <CustomText
+              variant="h6"
+              style={{marginLeft: 6}}
+              fontFamily="Okra-Light">
+              Notifications
+            </CustomText>
           </View>
-          <Text style={styles.notificationText}>
-            Induction Programme for 1st year will commence 1st December 2022…
-            <Text style={styles.linkText}> Click Here{'>'}</Text>
-          </Text>
+          <TouchableOpacity>
+            <CustomText
+              variant="h7"
+              fontFamily="Okra-Regular"
+              style={styles.notificationText}>
+              <CustomText
+                numberOfLines={2}
+                variant="h7"
+                fontFamily="Okra-Regular"
+                fontSize={11}>
+                Induction Programme for 1st year will commence 1st December
+                2022…
+              </CustomText>
+              <CustomText fontFamily="Okra-Medium" style={styles.linkText}>
+                {' '}
+                Click Here{'>'}
+              </CustomText>
+            </CustomText>
+          </TouchableOpacity>
         </View>
 
         {/* Features Grid */}
@@ -79,7 +110,14 @@ const MvitScreen = () => {
               <View style={styles.iconContainer}>
                 <Image source={src} style={styles.icon} />
               </View>
-              <Text style={styles.boxLabel}>{key}</Text>
+              {/* <Text style={styles.boxLabel}>{key}</Text> */}
+              <CustomText
+                variant="h6"
+                fontSize={10}
+                fontFamily="Okra-Medium"
+                style={styles.boxLabel}>
+                {key}
+              </CustomText>
             </TouchableOpacity>
           ))}
         </View>

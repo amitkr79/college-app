@@ -1,12 +1,12 @@
-import { Dimensions } from "react-native";
-import { createStyleSheet } from "react-native-unistyles";
-import { Colors } from "./Constants";
+import {Dimensions} from 'react-native';
+import {createStyleSheet} from 'react-native-unistyles';
+import {Colors} from './Constants';
 const {width} = Dimensions.get('window');
 const BOX_GAP = 14;
 const BOX_SIZE = (width - 5 * 16) / 4;
 const ICON_SIZE = BOX_SIZE * 0.5;
 export const dashboardStyle = createStyleSheet(({colors, device}) => ({
- container: {
+  container: {
     flex: 1,
     backgroundColor: Colors.background,
   },
@@ -17,7 +17,7 @@ export const dashboardStyle = createStyleSheet(({colors, device}) => ({
     padding: 16,
     paddingBottom: 8,
     borderBottomWidth: 1,
-    borderBottomColor: Colors.border,
+    borderBottomColor: colors.border,
   },
   backButton: {
     flexDirection: 'row',
@@ -25,9 +25,7 @@ export const dashboardStyle = createStyleSheet(({colors, device}) => ({
   },
   headerTitle: {
     marginLeft: 8,
-    fontSize: 18,
-    fontWeight: '600',
-    color: Colors.black,
+    bottom:3
   },
   userInfo: {
     flexDirection: 'row',
@@ -83,14 +81,13 @@ export const dashboardStyle = createStyleSheet(({colors, device}) => ({
   },
   linkText: {
     color: Colors.primary,
-    fontWeight: '600',
   },
   grid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     marginHorizontal: 12,
     justifyContent: 'flex-start',
-    left:7
+    left: 7,
   },
   box: {
     width: BOX_SIZE,
@@ -122,8 +119,6 @@ export const dashboardStyle = createStyleSheet(({colors, device}) => ({
     resizeMode: 'contain',
   },
   boxLabel: {
-    fontSize: 12,
-    fontWeight: '500',
     color: Colors.black,
     textAlign: 'center',
   },
