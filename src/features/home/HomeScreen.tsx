@@ -85,6 +85,7 @@ const HomeScreen: FC = () => {
         {/* fourth section  */}
         <Academics />
         
+        
       </ScrollView>
     </>
   );

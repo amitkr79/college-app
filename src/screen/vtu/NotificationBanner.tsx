@@ -1,5 +1,7 @@
 import CustomText from '@components/global/CustomText';
+import Icon from '@components/global/Icon';
 import {Colors, Fonts} from '@unistyles/Constants';
+import {navigate} from '@utils/NavigationUtils';
 import React, {useRef, useState, useEffect} from 'react';
 import {
   View,
@@ -24,17 +26,16 @@ interface NotificationBannerProps {
   autoScrollInterval?: number; // Optional prop to control scroll speed
 }
 
-const NotificationBanner = ({data, autoScrollInterval = 4000}: NotificationBannerProps) => {
+const NotificationBanner = ({
+  data,
+  autoScrollInterval = 4000,
+}: NotificationBannerProps) => {
   const scrollViewRef = useRef<ScrollView>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const itemWidth = width - 30 + 15; // Width + marginRight
 
   const handlePress = async (link: string) => {
-    try {
-      await Linking.openURL(link);
-    } catch (err) {
-      console.error('Failed to open link:', err);
-    }
+    navigate('CircularScreen');
   };
 
   // Auto-scroll functionality
@@ -81,6 +82,22 @@ const NotificationBanner = ({data, autoScrollInterval = 4000}: NotificationBanne
             onPress={() => handlePress(item.link)}
             activeOpacity={0.7}>
             <View style={styles.textContainer}>
+              <View style={styles.notificationHeader}>
+                <Icon
+                  iconFamily="Ionicons"
+                  name="notifications"
+                  size={20}
+                  color={Colors.primary}
+                />
+                <CustomText
+                  variant="h6"
+                  style={{marginLeft: 6}}
+                  fontFamily="Okra-Bold"
+                    fontSize={14}
+                  >
+                  Notifications
+                </CustomText>
+              </View>
               <CustomText
                 variant="h5"
                 fontFamily={Fonts.Regular}
@@ -146,7 +163,7 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width - 30,
     marginRight: 15,
     borderRadius: 10,
-    backgroundColor: Colors.card,
+    backgroundColor: Colors.primaryGloss,
     overflow: 'hidden',
     elevation: 3,
     shadowColor: Colors.background,
@@ -156,6 +173,11 @@ const styles = StyleSheet.create({
   },
   textContainer: {
     padding: 15,
+  },
+  notificationHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 5,
   },
   notificationText: {
     color: Colors.textPrimary,

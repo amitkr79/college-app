@@ -68,13 +68,15 @@ const MvitScreen = () => {
         contentContainerStyle={styles.body}
         showsVerticalScrollIndicator={false}>
         {/* Notification Card */}
-        <View style={styles.notificationCard}>
+        <TouchableOpacity
+          style={styles.notificationCard}
+          onPress={() => console.log('pressed')}>
           <View style={styles.notificationHeader}>
             <Ionicons name="notifications" size={20} color={Colors.primary} />
             <CustomText
               variant="h6"
               style={{marginLeft: 6}}
-              fontFamily="Okra-Light">
+              fontFamily="Okra-Bold">
               Notifications
             </CustomText>
           </View>
@@ -97,7 +99,7 @@ const MvitScreen = () => {
               </CustomText>
             </CustomText>
           </TouchableOpacity>
-        </View>
+        </TouchableOpacity>
 
         {/* Features Grid */}
         <View style={styles.grid}>

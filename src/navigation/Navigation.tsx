@@ -13,6 +13,7 @@ import MvitScreen from '@screen/mvit/MvitScreen';
 import VtuScreen from '@screen/vtu/VtuScreen';
 import CircularScreen from '@screen/vtu/CircularScreen';
 import SyllabusScreen from '@screen/vtu/SyllabusScreen';
+import PreviousPapersScreen from '@screen/vtu/PreviousPapersScreen';
 const Stack = createNativeStackNavigator();
 
 const Navigation: FC = () => {
@@ -93,6 +94,13 @@ const Navigation: FC = () => {
             }}
             name="SyllabusScreen"
             component={SyllabusScreen}
+        />
+        <Stack.Screen 
+            options={{
+                animation:"fade"
+            }}
+            name="PreviousPapersScreen"
+            component={PreviousPapersScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

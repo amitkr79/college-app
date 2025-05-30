@@ -13,7 +13,9 @@
       "@states/*": ["src/states/*"],
       "@services/*": ["src/services/*"],
       "@utils/*": ["src/utils/*"],
-      "@screen/*": ["src/screen/*"]
+      "@screen/*": ["src/screen/*"],
+      "@hooks/*": ["src/hooks/*"]
+
     }
   }
 }

@@ -22,7 +22,7 @@ const VtuScreen = () => {
       id: 2,
       source: require("@assets/academic/papers.png"),
       label: "Prevous Year",
-      onPress: () => push('CircularScreen')
+      onPress: () => push('PreviousPapersScreen')
     },
     { 
       id: 3,
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
     paddingHorizontal: 20,
-    paddingTop: 20,
+    paddingTop: 10,
   },
   sectionTitle: {
     marginBottom: 20,

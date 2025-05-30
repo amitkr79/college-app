@@ -62,6 +62,7 @@ export const dashboardStyle = createStyleSheet(({colors, device}) => ({
     },
     shadowOpacity: 0.1,
     shadowRadius: 10,
+    paddingVertical:20
   },
   notificationHeader: {
     flexDirection: 'row',
