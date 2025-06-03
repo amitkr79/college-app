@@ -1,14 +1,13 @@
 import {RFValue} from 'react-native-responsive-fontsize';
 import {createStyleSheet} from 'react-native-unistyles';
 import {Colors, isBannerHeight} from './Constants';
-import {Dimensions, Platform} from 'react-native';
+import {Dimensions, Platform, StatusBar} from 'react-native';
 
 const {width} = Dimensions.get('window');
 const boxWidth = (width - 5 * 20) / 4;
 export const homeStyles = createStyleSheet(({colors, device, border}) => ({
   container: {
     flex: 1,
-    // backgroundColor: colors.background_light,
     backgroundColor: colors.background,
     paddingHorizontal: 4,
   },

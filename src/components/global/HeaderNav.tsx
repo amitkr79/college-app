@@ -6,10 +6,13 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import CustomText from './CustomText';
 import { Colors } from '@unistyles/Constants';
 import { goBack } from '@utils/NavigationUtils';
+import Icon from './Icon';
 type HeaderNavProps={
-  text:string
+  text:string,
+  onPress?:()=>void,
+  rightAction?:boolean
 }
-const HeaderNav:FC<HeaderNavProps> = ({text}) => {
+const HeaderNav:FC<HeaderNavProps> = ({text,onPress,rightAction}) => {
   const {styles} = useStyles(dashboardStyle);
   return (
     <View>
@@ -23,6 +26,8 @@ const HeaderNav:FC<HeaderNavProps> = ({text}) => {
             {text}
           </CustomText>
         </TouchableOpacity>
+        
+
       </View>
     </View>
   );

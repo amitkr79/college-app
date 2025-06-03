@@ -69,8 +69,6 @@ const VtuScreen = () => {
           ))}
         </View>
       </View>
-
-
     </SafeAreaView>
   );
 };

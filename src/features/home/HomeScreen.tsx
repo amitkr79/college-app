@@ -22,9 +22,9 @@ const HomeScreen: FC = () => {
   const {styles} = useStyles(homeStyles);
   return (
     <>
+      <StatusBar barStyle="dark-content" />
       <ScrollView bounces={false} style={styles.container}>
         <SafeAreaView />
-        <StatusBar barStyle="dark-content" />
 
         {/* firs section i.e header  */}
         <Animated.View

@@ -123,4 +123,13 @@ export const dashboardStyle = createStyleSheet(({colors, device}) => ({
     color: Colors.black,
     textAlign: 'center',
   },
+    createButton: {
+    padding: 5,
+  },
+  createButtonText: {
+    color: Colors.primary,
+  },
+  disabledButton: {
+    color: Colors.textTertiary,
+  },
 }));

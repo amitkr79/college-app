@@ -55,5 +55,9 @@
 		<string>Okra-MediumLight.ttf</string>
 		<string>Okra-Regular.ttf</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>We need access to your camera to upload event photos</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need access to your photo library to upload event photos</string>
 </dict>
 </plist>

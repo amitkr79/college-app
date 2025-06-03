@@ -1,4 +1,4 @@
-import {View, Text, TextStyle, Platform, StyleSheet} from 'react-native';
+import {View, Text, TextStyle, Platform, StyleSheet, StyleProp} from 'react-native';
 import React, {FC} from 'react';
 import {RFValue} from 'react-native-responsive-fontsize';
 import {Colors} from '@unistyles/Constants';
@@ -17,7 +17,8 @@ interface CustomTextProps {
 
   fontSize?: number;
   color?: string;
-  style?: TextStyle | TextStyle[];
+  // style?: TextStyle | TextStyle[];
+  style?: StyleProp<TextStyle>; // ✅ Fix
   children?: React.ReactNode;
   numberOfLines?: number;
   onLayout?: (event: any) => void;
@@ -64,7 +65,7 @@ const CustomText: FC<CustomTextProps> = ({
       onLayout={onLayout}
       style={[
         styles.text,
-        {color: color || Colors.text, fontSize: computeFontSize},
+        {color: color || Colors.black, fontSize: computeFontSize},
         fontFamilyStyle,
         style,
       ]}

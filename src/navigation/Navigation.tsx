@@ -14,7 +14,11 @@ import VtuScreen from '@screen/vtu/VtuScreen';
 import CircularScreen from '@screen/vtu/CircularScreen';
 import SyllabusScreen from '@screen/vtu/SyllabusScreen';
 import PreviousPapersScreen from '@screen/vtu/PreviousPapersScreen';
-const Stack = createNativeStackNavigator();
+import AddEvents from '@features/events/AddEvents';
+import CreatePostScreen from '@features/feed/CreatePostScreen';
+import ClubDetailScreen from '@features/club/ClubDetailScreen';
+import { RootStackParamList } from '@utils/naviagtionTypes';
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const Navigation: FC = () => {
   return (
@@ -101,6 +105,27 @@ const Navigation: FC = () => {
             }}
             name="PreviousPapersScreen"
             component={PreviousPapersScreen}
+        />
+        <Stack.Screen 
+            options={{
+                animation:"fade"
+            }}
+            name="AddEvents"
+            component={AddEvents}
+        />
+        <Stack.Screen 
+            options={{
+                animation:"fade"
+            }}
+            name="CreatePostScreen"
+            component={CreatePostScreen}
+        />
+        <Stack.Screen 
+            options={{
+                animation:"fade"
+            }}
+            name="ClubDetailScreen"
+            component={ClubDetailScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>
