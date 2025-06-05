@@ -1,18 +1,26 @@
-import React, { useState } from 'react';
-import { View, FlatList, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import React, {useState} from 'react';
+import {
+  View,
+  FlatList,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+} from 'react-native';
 // import { mockFeedState } from '../../mocks/socialMocks';
 // import PostCard from '../../components/social/PostCard';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { Colors } from '@unistyles/Constants';
+import {Colors} from '@unistyles/Constants';
 import CustomText from '@components/global/CustomText';
-import { mockFeedState } from '@utils/socialMock';
+import {mockFeedState} from '@utils/socialMock';
 import PostCard from './PostCard';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { navigate } from '@utils/NavigationUtils';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import {navigate} from '@utils/NavigationUtils';
+import SearchBar from '@components/ui/SearchBar';
 
 const FeedScreen = () => {
   const [feedData, setFeedData] = useState(mockFeedState);
   const [refreshing, setRefreshing] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const handleLike = (postId: string) => {
     setFeedData(prev => {
@@ -23,13 +31,13 @@ const FeedScreen = () => {
             ...post,
             likes: alreadyLiked
               ? post.likes.filter(id => id !== prev.currentUserId)
-              : [...post.likes, prev.currentUserId]
+              : [...post.likes, prev.currentUserId],
           };
         }
         return post;
       });
-      
-      return { ...prev, posts: updatedPosts };
+
+      return {...prev, posts: updatedPosts};
     });
   };
 
@@ -42,17 +50,17 @@ const FeedScreen = () => {
             userId: prev.currentUserId,
             text,
             createdAt: new Date(),
-            likes: []
+            likes: [],
           };
           return {
             ...post,
-            comments: [...post.comments, newComment]
+            comments: [...post.comments, newComment],
           };
         }
         return post;
       });
-      
-      return { ...prev, posts: updatedPosts };
+
+      return {...prev, posts: updatedPosts};
     });
   };
 
@@ -78,19 +86,25 @@ const FeedScreen = () => {
         />
         <TouchableOpacity style={styles.filterButton}>
           <Icon name="filter-list" size={24} color={Colors.textPrimary} />
-        </TouchableOpacity>
+        </TouchableOpacity> 
+       
+        {/* <SearchBar
+          placeholder="Search posts, people..."
+          onChangeText={setSearchQuery}
+          value={searchQuery}
+        /> */}
       </View>
-      
+
       {/* Feed Content */}
       <FlatList
         data={feedData.posts}
         keyExtractor={item => item.id}
         refreshing={refreshing}
         onRefresh={handleRefresh}
-        renderItem={({ item }) => (
-          <PostCard 
-            post={item} 
-            users={feedData.users} 
+        renderItem={({item}) => (
+          <PostCard
+            post={item}
+            users={feedData.users}
             clubs={feedData.clubs}
             currentUserId={feedData.currentUserId}
             onLike={handleLike}
@@ -98,12 +112,14 @@ const FeedScreen = () => {
           />
         )}
         ListHeaderComponent={
-          <TouchableOpacity 
-            style={styles.createPostButton} 
-            onPress={navigateToCreatePost}
-          >
+          <TouchableOpacity
+            style={styles.createPostButton}
+            onPress={navigateToCreatePost}>
             <Icon name="edit" size={20} color={Colors.white} />
-            <CustomText variant="h6" fontFamily="Okra-Medium" style={styles.createPostText}>
+            <CustomText
+              variant="h6"
+              fontFamily="Okra-Medium"
+              style={styles.createPostText}>
               Create a post
             </CustomText>
           </TouchableOpacity>

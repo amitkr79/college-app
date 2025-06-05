@@ -12,10 +12,10 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import CustomText from '@components/global/CustomText';
 import {Colors} from '@unistyles/Constants';
 import {StyleSheet} from 'react-native';
-import {PdfModalProps} from 'src/types/dummyData';
+import {CircularPdfModalProps} from 'src/types/dummyData';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
-const PdfModal: FC<PdfModalProps> = ({visible, paper, onClose}) => {
+const PdfModal: FC<CircularPdfModalProps> = ({visible, paper, onClose}) => {
   return (
     <Modal
       visible={visible}
@@ -32,10 +32,10 @@ const PdfModal: FC<PdfModalProps> = ({visible, paper, onClose}) => {
           </TouchableOpacity>
           <View style={styles.pdfHeaderText}>
             <CustomText variant="h5" fontFamily="Okra-Bold" numberOfLines={1}>
-              {paper?.subjectName}{paper?.subjectCode} 
+              {paper?.title}
             </CustomText>
-            <CustomText variant="h7" fontFamily="Okra-Regular">
-              {paper?.department} • Sem {paper?.semester} • {paper?.year} Year
+            <CustomText variant="h7" fontSize={10} fontFamily="Okra-Regular">
+              {paper?.year}
             </CustomText>
           </View>
           <TouchableOpacity
@@ -74,6 +74,7 @@ const styles = StyleSheet.create({
     padding: 16,
     backgroundColor: Colors.white,
     elevation: 2,
+    justifyContent: 'center',
   },
   pdfHeaderText: {
     flex: 1,

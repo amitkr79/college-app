@@ -21,6 +21,18 @@ export interface Paper {
 
 export interface PdfModalProps {
   visible: boolean;
-  paper: Paper | null;
+  paper?: Paper | null;
+  onClose: () => void;
+}
+
+export interface Papers{
+  id?:string;
+  paperUrl:string;
+  title:string,
+  year:string;
+}
+export interface CircularPdfModalProps {
+  visible: boolean;
+  paper?: Papers | null;
   onClose: () => void;
 }
