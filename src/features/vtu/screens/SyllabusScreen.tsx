@@ -8,7 +8,7 @@ import {
   streamOptions,
   yearOptions,
 } from '@utils/dummyData';
-import {fetchSyllabus} from '@services/circular/syllabus.api';
+import {fetchSyllabus} from '@features/vtu/service/syllabus.api';
 import {Colors} from '@unistyles/Constants';
 import SyllabusDropdown from '@components/vtu/syllabus/SyllabusDropdown';
 import SyllabusSubmitButton from '@components/vtu/syllabus/SyllabusSubmitButton';

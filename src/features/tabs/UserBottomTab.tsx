@@ -1,10 +1,10 @@
 import React from 'react'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import HomeScreen from '@features/home/HomeScreen';
-import JobScreen from '@features/jobs/JobScreen';
-import FeedScreen from '@features/feed/FeedScreen';
-import EventScreen from '@features/events/EventScreen';
-import ClubScreen from '@features/club/ClubScreen';
+import JobScreen from '@features/jobs/screens/JobScreen';
+import FeedScreen from '@features/feed/screens/FeedScreen';
+import EventScreen from '@features/events/screens/EventScreen';
+import ClubScreen from '@features/club/screens/ClubScreen';
 import CustomTabBar from './CustomTabBar';
 
 const Tab = createBottomTabNavigator();

@@ -7,13 +7,12 @@ import {
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
-import CustomText from '../../components/global/CustomText';
+import CustomText from '../../../components/global/CustomText';
 import {Colors} from '@unistyles/Constants';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 import {mockClubs} from '@utils/ClubMock';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {useNavigation} from '@react-navigation/native';
-import ClubCard from '@components/club/ClubCard';
+import ClubCard from '@features/club/components/ClubCard';
 import SearchBar from '@components/ui/SearchBar';
 import CategoryFilter from '@components/global/CategoryFilter';
 import { navigate } from '@utils/NavigationUtils';

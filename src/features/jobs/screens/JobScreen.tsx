@@ -2,17 +2,14 @@ import React, { useState } from 'react';
 import { View, TouchableOpacity, StatusBar } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { Colors } from '@unistyles/Constants';
-import CustomText from '../../components/global/CustomText';
+import CustomText from '@components/global/CustomText';
 import { mockNotifications, mockJobListings } from '@utils/JobData';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import SearchBar from '@components/ui/SearchBar';
-// import NotificationScreen from './NotificationScreen';
-import JobScreen from './JobScreen';
-// import LoadingScreen from './LoadingScreen';
 import styles from '@unistyles/jobScreenStyles'
-import NotificationScreen from '@screen/job/PlacementCell';
 import LoadingScreen from '@components/ui/LoadingScreen';
-import JobOppurtunites from '@screen/job/JobOppurtunites';
+import NotificationScreen from './PlacementCell';
+import JobOppurtunites from './JobOppurtunites';
 
 const JobsScreen = () => {
   const [activeTab, setActiveTab] = useState<'notifications' | 'jobs'>('notifications');

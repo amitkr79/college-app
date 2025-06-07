@@ -1,10 +1,10 @@
 import React from 'react';
 import { FlatList, View, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import CustomText from '../../components/global/CustomText';
+import CustomText from '@components/global/CustomText';
 import styles from '@unistyles/jobScreenStyles'
 import { Colors } from '@unistyles/Constants';
-import { JobNotification } from '../../types/jobType';
+import { JobNotification } from '../../../types/jobType';
 
 const PlacementCell = ({ data }: { data: JobNotification[] }) => {
   const renderNotificationItem = ({ item }: { item: JobNotification }) => (

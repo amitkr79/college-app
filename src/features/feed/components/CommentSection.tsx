@@ -3,7 +3,7 @@ import { View, TextInput, StyleSheet, FlatList, Image, TouchableOpacity } from '
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { Colors } from '@unistyles/Constants';
 // import CustomText from '../global/CustomText';
-import { Comment, User } from '../../types/socialTypes';
+import { Comment, User } from '../../../types/socialTypes';
 import CustomText from '@components/global/CustomText';
 
 interface CommentSectionProps {

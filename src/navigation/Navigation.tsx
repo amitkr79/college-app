@@ -7,17 +7,17 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import { navigationRef } from '@utils/NavigationUtils';
 import {FC} from 'react';
-import ProfileScreen from '@screen/profile/ProfileScreen'
-import NotificationScreen from '@screen/notification/NotificationScreen';
-import MvitScreen from '@screen/mvit/MvitScreen';
-import VtuScreen from '@screen/vtu/VtuScreen';
-import CircularScreen from '@screen/vtu/CircularScreen';
-import SyllabusScreen from '@screen/vtu/SyllabusScreen';
-import PreviousPapersScreen from '@screen/vtu/PreviousPapersScreen';
-import AddEvents from '@features/events/AddEvents';
-import CreatePostScreen from '@features/feed/CreatePostScreen';
-import ClubDetailScreen from '@features/club/ClubDetailScreen';
+import AddEvents from '@features/events/screens/AddEvents';
+import CreatePostScreen from '@features/feed/screens/CreatePostScreen';
+import ClubDetailScreen from '@features/club/screens/ClubDetailScreen';
 import { RootStackParamList } from '@utils/naviagtionTypes';
+import ProfileScreen from '@features/profile/screens/ProfileScreen';
+import MvitScreen from '@features/mvit/screens/MvitScreen';
+import VtuScreen from '@features/vtu/screens/VtuScreen';
+import CircularScreen from '@features/vtu/screens/CircularScreen';
+import SyllabusScreen from '@features/vtu/screens/SyllabusScreen';
+import PreviousPapersScreen from '@features/vtu/screens/PreviousPapersScreen';
+import NotificationScreen from '../screen/notification/NotificationScreen';
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const Navigation: FC = () => {

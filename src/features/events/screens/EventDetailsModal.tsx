@@ -10,7 +10,7 @@ import {
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import CustomText from '@components/global/CustomText';
 import {Colors} from '@unistyles/Constants';
-import {Event} from '../../types/eventTypes';
+import {Event} from '../../../types/eventTypes';
 
 
 type UserType = 'student' | 'faculty' | 'admin';

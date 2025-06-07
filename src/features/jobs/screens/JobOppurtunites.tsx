@@ -1,10 +1,11 @@
 import React from 'react';
 import { FlatList, View, TouchableOpacity, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import CustomText from '../../components/global/CustomText';
+// import CustomText from '../../../../../components/global/CustomText';
 import styles from '@unistyles/jobScreenStyles'
 import { Colors } from '@unistyles/Constants';
-import { JobListing } from '../../types/jobType';
+import { JobListing } from '../../../types/jobType';
+import CustomText from '@components/global/CustomText';
 
 const JobOppurtunites = ({ data }: { data: JobListing[] }) => {
   const renderJobItem = ({ item }: { item: JobListing }) => (

@@ -3,7 +3,7 @@ import {View, Image, TouchableOpacity, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import CustomText from '@components/global/CustomText';
 import {Colors} from '@unistyles/Constants';
-import {Event} from '../../types/eventTypes'; // Create a types.ts file for shared types
+import {Event} from '../../../types/eventTypes'; // Create a types.ts file for shared types
 
 type EventCardProps = {
   event: Event;

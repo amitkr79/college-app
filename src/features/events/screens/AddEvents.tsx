@@ -16,7 +16,7 @@ import CustomText from '@components/global/CustomText';
 import {Colors} from '@unistyles/Constants';
 import HeaderNav from '@components/global/HeaderNav';
 import {useNavigation} from '@react-navigation/native';
-import {Event, EventStatus} from '../../types/eventTypes';
+import {Event, EventStatus} from '../../../types/eventTypes';
 
 const AddEvents = () => {
   const navigation = useNavigation();

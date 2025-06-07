@@ -12,7 +12,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import {Colors} from '@unistyles/Constants';
 import CustomText from '@components/global/CustomText';
 import {mockFeedState} from '@utils/socialMock';
-import PostCard from './PostCard';
+import PostCard from '../components/PostCard';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {navigate} from '@utils/NavigationUtils';
 import SearchBar from '@components/ui/SearchBar';

@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Image, TouchableOpacity, StyleSheet } from 'react-native';
-import CustomText from '../global/CustomText';
+import CustomText from '../../../components/global/CustomText';
 import { Colors } from '@unistyles/Constants';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { ClubMember } from '../../types/clubTypes';
-import { User } from '../../types/socialTypes';
+import { ClubMember } from '../../../types/clubTypes';
+import { User } from '../../../types/socialTypes';
 
 const member: ClubMember = {
   userId: 'user2',

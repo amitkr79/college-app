@@ -9,7 +9,7 @@ import React, {useState, useEffect} from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import HeaderNav from '@components/global/HeaderNav';
 import CustomText from '@components/global/CustomText';
-import {examCircular} from '@services/circular/syllabus.api';
+import {examCircular} from '@features/vtu/service/syllabus.api';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {Colors} from '@unistyles/Constants';
 import PdfModal from '@components/vtu/PdfModal';

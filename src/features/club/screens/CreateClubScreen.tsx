@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, ScrollView, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
-import CustomText from '../../components/global/CustomText';
-import HeaderNav from '../../components/global/HeaderNav';
+import CustomText from '../../../components/global/CustomText';
+import HeaderNav from '../../../components/global/HeaderNav';
 import { Colors } from '@unistyles/Constants';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons'; // Or switch to Ionicons
 import { Colors } from '@unistyles/Constants';
-import { FeedPost, User, Club } from '../../types/socialTypes';
+import { FeedPost, User, Club } from '../../../types/socialTypes';
 import CustomText from '@components/global/CustomText';
 import ReactionBar from './ReactionBar';
 import CommentSection from './CommentSection';

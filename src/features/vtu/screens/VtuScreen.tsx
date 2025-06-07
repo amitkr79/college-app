@@ -2,7 +2,7 @@ import { View, Image, TouchableOpacity, StyleSheet, Dimensions } from 'react-nat
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import HeaderNav from '@components/global/HeaderNav';
-import NotificationBanner from './NotificationBanner';
+import NotificationBanner from '../components/NotificationBanner';
 import { vtuNotificationData } from '@utils/dummyData';
 import CustomText from '@components/global/CustomText';
 import { Colors } from '@unistyles/Constants';

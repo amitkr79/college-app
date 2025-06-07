@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {Colors} from '@unistyles/Constants';
 import {mockClubDetails} from '@utils/ClubMock';
-import ClubHeader from '@components/club/ClubHeader';
-import ClubTabs from '@components/club/ClubTabs';
+import ClubHeader from '@features/club/components/ClubHeader';
+import ClubTabs from '@features/club/components/ClubTabs';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '@utils/naviagtionTypes';
 
